@@ -1,0 +1,444 @@
+{
+  "schemaVersion": 5,
+  "productId": "axom_q4",
+  "productName": "AXOM Q4",
+  "note": "Geometry is a public GrabCAD quadcopter sample standing in for a real AXOM airframe. Every canonical key below was read from the converted GLB with cad-pipeline/inspect_glb_nodes.mjs, never typed from the raw CAD names — see docs/MEMORY.md for the two runtime name-rewriting rules that makes necessary. All `website` figures are illustrative placeholders, not specifications.",
+  "parts": {
+    "9Fan#20": {
+      "displayName": "Rotor 1 — Front Left",
+      "description": "Counter-clockwise lift rotor on the front-left arm. The motor stator is fixed to the arm boom; the propeller, spinner and retaining nut turn together as one rigid body.",
+      "memberNodeKeys": [
+        "10_Motor#19",
+        "9Fan#20",
+        "5spinner_2#70",
+        "Nut_2#74"
+      ],
+      "rig": {
+        "fixedNodeKeys": [
+          "10_Motor#19"
+        ],
+        "spinningNodeKeys": [
+          "9Fan#20",
+          "5spinner_2#70",
+          "Nut_2#74"
+        ]
+      },
+      "specs": [
+        {
+          "label": "Solids",
+          "value": "4",
+          "provenance": "measured",
+          "note": "Distinct nodes in this component."
+        },
+        {
+          "label": "Rotating / fixed",
+          "value": "3 / 1",
+          "provenance": "measured",
+          "note": "Verified separable in the CAD — this is what makes RPM control possible."
+        },
+        {
+          "label": "Blade pitch",
+          "value": "Fixed (blades fused)",
+          "provenance": "measured",
+          "note": "Both blades are one watertight solid with no separable mesh island, so a rigid pitch is geometrically impossible here."
+        }
+      ]
+    },
+    "9Fan_1#52": {
+      "displayName": "Rotor 2 — Front Right",
+      "description": "Clockwise lift rotor on the front-right arm, mirroring Rotor 1. Opposing rotation across the diagonal is what cancels yaw torque on a quadrotor.",
+      "memberNodeKeys": [
+        "10_Motor_1#46",
+        "9Fan_1#52",
+        "5spinner_3#71",
+        "Nut_3#75"
+      ],
+      "rig": {
+        "fixedNodeKeys": [
+          "10_Motor_1#46"
+        ],
+        "spinningNodeKeys": [
+          "9Fan_1#52",
+          "5spinner_3#71",
+          "Nut_3#75"
+        ]
+      },
+      "specs": [
+        {
+          "label": "Solids",
+          "value": "4",
+          "provenance": "measured",
+          "note": "Distinct nodes in this component."
+        },
+        {
+          "label": "Rotating / fixed",
+          "value": "3 / 1",
+          "provenance": "measured",
+          "note": "Verified separable in the CAD — this is what makes RPM control possible."
+        },
+        {
+          "label": "Blade pitch",
+          "value": "Fixed (blades fused)",
+          "provenance": "measured",
+          "note": "Both blades are one watertight solid with no separable mesh island, so a rigid pitch is geometrically impossible here."
+        }
+      ]
+    },
+    "9Fan_2#53": {
+      "displayName": "Rotor 3 — Rear Right",
+      "description": "Counter-clockwise lift rotor on the rear-right arm. Differential thrust between this rotor and its diagonal pair produces pitch and roll authority.",
+      "memberNodeKeys": [
+        "10_Motor_2#47",
+        "9Fan_2#53",
+        "5spinner#68",
+        "Nut#72"
+      ],
+      "rig": {
+        "fixedNodeKeys": [
+          "10_Motor_2#47"
+        ],
+        "spinningNodeKeys": [
+          "9Fan_2#53",
+          "5spinner#68",
+          "Nut#72"
+        ]
+      },
+      "specs": [
+        {
+          "label": "Solids",
+          "value": "4",
+          "provenance": "measured",
+          "note": "Distinct nodes in this component."
+        },
+        {
+          "label": "Rotating / fixed",
+          "value": "3 / 1",
+          "provenance": "measured",
+          "note": "Verified separable in the CAD — this is what makes RPM control possible."
+        },
+        {
+          "label": "Blade pitch",
+          "value": "Fixed (blades fused)",
+          "provenance": "measured",
+          "note": "Both blades are one watertight solid with no separable mesh island, so a rigid pitch is geometrically impossible here."
+        }
+      ]
+    },
+    "9Fan_3#54": {
+      "displayName": "Rotor 4 — Rear Left",
+      "description": "Clockwise lift rotor on the rear-left arm. Each rotor is a fixed-pitch two-blade propeller, so thrust is modulated by shaft speed alone.",
+      "memberNodeKeys": [
+        "10_Motor_3#48",
+        "9Fan_3#54",
+        "5spinner_1#69",
+        "Nut_1#73"
+      ],
+      "rig": {
+        "fixedNodeKeys": [
+          "10_Motor_3#48"
+        ],
+        "spinningNodeKeys": [
+          "9Fan_3#54",
+          "5spinner_1#69",
+          "Nut_1#73"
+        ]
+      },
+      "specs": [
+        {
+          "label": "Solids",
+          "value": "4",
+          "provenance": "measured",
+          "note": "Distinct nodes in this component."
+        },
+        {
+          "label": "Rotating / fixed",
+          "value": "3 / 1",
+          "provenance": "measured",
+          "note": "Verified separable in the CAD — this is what makes RPM control possible."
+        },
+        {
+          "label": "Blade pitch",
+          "value": "Fixed (blades fused)",
+          "provenance": "measured",
+          "note": "Both blades are one watertight solid with no separable mesh island, so a rigid pitch is geometrically impossible here."
+        }
+      ]
+    },
+    "4Spider_Arm#13": {
+      "displayName": "Arm Boom — Front Left",
+      "description": "Truss-braced arm carrying the front-left rotor. The open truss geometry is what keeps arm mass down without giving up bending stiffness at the motor mount."
+    },
+    "4Spider_Arm_1#49": {
+      "displayName": "Arm Boom — Front Right",
+      "description": "Truss-braced arm carrying the front-right rotor."
+    },
+    "4Spider_Arm_2#50": {
+      "displayName": "Arm Boom — Rear Right",
+      "description": "Truss-braced arm carrying the rear-right rotor."
+    },
+    "4Spider_Arm_3#51": {
+      "displayName": "Arm Boom — Rear Left",
+      "description": "Truss-braced arm carrying the rear-left rotor."
+    },
+    "1_Spider_Base#1": {
+      "displayName": "Lower Frame Plate",
+      "description": "Primary structural plate. All four arms, the landing standoffs and the power distribution stack land on this one part, so it carries every flight load into the airframe."
+    },
+    "2_Spider_top#14": {
+      "displayName": "Upper Frame Plate",
+      "description": "Closes the frame sandwich above the avionics bay and provides the battery mounting face."
+    },
+    "3Distribution_Board#0": {
+      "displayName": "Power Distribution Board",
+      "description": "Splits the battery feed to the four electronic speed controllers and provides regulated rails for the avionics."
+    },
+    "3Distribution_Board_1#6": {
+      "displayName": "Power Distribution Board — Upper",
+      "description": "Second distribution layer, stacked above the first to keep high-current and signal wiring on separate planes."
+    },
+    "11Battery#67": {
+      "displayName": "Flight Battery",
+      "description": "Lithium-polymer pack carried on the upper plate. Battery mass dominates the all-up weight, so its position sets the airframe's centre of gravity."
+    },
+    "12Electrical_Unit#7": {
+      "displayName": "Flight Controller",
+      "description": "Inertial measurement and control unit. Mounted inboard and low, where rotor-induced vibration is smallest."
+    },
+    "13_Electrical_Unit_2#8": {
+      "displayName": "Radio & Telemetry Module",
+      "description": "Command link and telemetry downlink electronics."
+    },
+    "7Electrical_Connector#55": {
+      "displayName": "Speed Controller — Front Left",
+      "description": "Electronic speed controller driving the front-left rotor. Commutation frequency is what the flight controller varies to change rotor thrust."
+    },
+    "7Electrical_Connector_1#58": {
+      "displayName": "Speed Controller — Rear Left",
+      "description": "Electronic speed controller driving the rear-left rotor."
+    },
+    "7Electrical_Connector_2#59": {
+      "displayName": "Speed Controller — Front Right",
+      "description": "Electronic speed controller driving the front-right rotor."
+    },
+    "7Electrical_Connector_3#60": {
+      "displayName": "Speed Controller — Rear Right",
+      "description": "Electronic speed controller driving the rear-right rotor."
+    }
+  },
+  "website": {
+    "tagline": "Compact quadrotor for short-range inspection and training.",
+    "mtowKg": {
+      "min": 0.8,
+      "max": 2
+    },
+    "keySpecs": [
+      {
+        "label": "Overall span",
+        "value": "0.28 m",
+        "provenance": "measured",
+        "note": "rotor tip to rotor tip, diagonal"
+      },
+      {
+        "label": "Configuration",
+        "value": "Quadrotor, fixed pitch",
+        "provenance": "measured",
+        "note": "4 drivable rotor rigs, none with variable pitch. Counted from the authored rigs."
+      },
+      {
+        "label": "Motor spacing",
+        "value": "240 mm"
+      },
+      {
+        "label": "Rotor diameter",
+        "value": "107 mm"
+      },
+      {
+        "label": "MTOW envelope",
+        "value": "0.8 – 2.0 kg"
+      },
+      {
+        "label": "Service ceiling",
+        "value": "4 200 m"
+      },
+      {
+        "label": "Endurance",
+        "value": "24 min"
+      }
+    ],
+    "datasheetUrl": "/datasheets/axom_q4.txt",
+    "flight": {
+      "ceilingM": 4200,
+      "maxVelocityMs": 22,
+      "phases": [
+        {
+          "label": "TAKEOFF",
+          "altitudeM": 0,
+          "velocityMs": 0,
+          "thrustN": 20.6,
+          "dragN": 0
+        },
+        {
+          "label": "CLIMB",
+          "altitudeM": 150,
+          "velocityMs": 6,
+          "thrustN": 18.2,
+          "dragN": 1.4
+        },
+        {
+          "label": "CRUISE",
+          "altitudeM": 1200,
+          "velocityMs": 17,
+          "thrustN": 14.9,
+          "dragN": 5.1
+        },
+        {
+          "label": "HIGH CRUISE",
+          "altitudeM": 3000,
+          "velocityMs": 15,
+          "thrustN": 16.3,
+          "dragN": 4.6
+        },
+        {
+          "label": "CEILING",
+          "altitudeM": 4200,
+          "velocityMs": 10,
+          "thrustN": 17.8,
+          "dragN": 2.6
+        }
+      ]
+    }
+  },
+  "sections": {
+    "section:rotor-1": {
+      "displayName": "Rotor Assembly 1 — Front Left",
+      "description": "Complete rotor assembly: boom, motor, mount hardware and the propeller it drives.",
+      "memberNodeKeys": [
+        "4Spider_Arm#13",
+        "10_Motor#19",
+        "9Fan#20",
+        "hex_nut_style_2_am_B18242M_-_Hex_nut,_Style_2,__M4_x_07_--D-N#21",
+        "pan_cross_head_am_B1867M_-_M2_x_04_x_6_Type_I_Cross_Recessed_PHMS_--6N#22",
+        "pan_cross_head_am_B1867M_-_M2_x_04_x_6_Type_I_Cross_Recessed_PHMS_--6N_1#23",
+        "pan_cross_head_am_B1867M_-_M2_x_04_x_6_Type_I_Cross_Recessed_PHMS_--6N_2#24",
+        "part_63#63",
+        "part_64#64",
+        "5spinner_2#70",
+        "Nut_2#74"
+      ],
+      "derivedFrom": "nearest rotor axis within 70 units of (-84.9, -84.9)"
+    },
+    "section:rotor-2": {
+      "displayName": "Rotor Assembly 2 — Front Right",
+      "description": "Complete rotor assembly: boom, motor, mount hardware and the propeller it drives.",
+      "memberNodeKeys": [
+        "pan_cross_head_am_B1867M_-_M2_x_04_x_6_Type_I_Cross_Recessed_PHMS_--6N_3#25",
+        "pan_cross_head_am_B1867M_-_M2_x_04_x_6_Type_I_Cross_Recessed_PHMS_--6N_6#28",
+        "pan_cross_head_am_B1867M_-_M2_x_04_x_6_Type_I_Cross_Recessed_PHMS_--6N_9#31",
+        "10_Motor_1#46",
+        "4Spider_Arm_1#49",
+        "9Fan_1#52",
+        "part_65#65",
+        "part_66#66",
+        "5spinner_3#71",
+        "Nut_3#75"
+      ],
+      "derivedFrom": "nearest rotor axis within 70 units of (84.9, -84.9)"
+    },
+    "section:rotor-3": {
+      "displayName": "Rotor Assembly 3 — Rear Right",
+      "description": "Complete rotor assembly: boom, motor, mount hardware and the propeller it drives.",
+      "memberNodeKeys": [
+        "pan_cross_head_am_B1867M_-_M2_x_04_x_6_Type_I_Cross_Recessed_PHMS_--6N_4#26",
+        "pan_cross_head_am_B1867M_-_M2_x_04_x_6_Type_I_Cross_Recessed_PHMS_--6N_7#29",
+        "pan_cross_head_am_B1867M_-_M2_x_04_x_6_Type_I_Cross_Recessed_PHMS_--6N_10#32",
+        "10_Motor_2#47",
+        "4Spider_Arm_2#50",
+        "9Fan_2#53",
+        "part_56#56",
+        "part_57#57",
+        "5spinner#68",
+        "Nut#72"
+      ],
+      "derivedFrom": "nearest rotor axis within 70 units of (84.9, 84.9)"
+    },
+    "section:rotor-4": {
+      "displayName": "Rotor Assembly 4 — Rear Left",
+      "description": "Complete rotor assembly: boom, motor, mount hardware and the propeller it drives.",
+      "memberNodeKeys": [
+        "pan_cross_head_am_B1867M_-_M2_x_04_x_6_Type_I_Cross_Recessed_PHMS_--6N_5#27",
+        "pan_cross_head_am_B1867M_-_M2_x_04_x_6_Type_I_Cross_Recessed_PHMS_--6N_8#30",
+        "pan_cross_head_am_B1867M_-_M2_x_04_x_6_Type_I_Cross_Recessed_PHMS_--6N_11#33",
+        "10_Motor_3#48",
+        "4Spider_Arm_3#51",
+        "9Fan_3#54",
+        "part_61#61",
+        "part_62#62",
+        "5spinner_1#69",
+        "Nut_1#73"
+      ],
+      "derivedFrom": "nearest rotor axis within 70 units of (-84.9, 84.9)"
+    },
+    "section:power": {
+      "displayName": "Power Bay",
+      "description": "Flight battery and its mounting face on the upper frame plate.",
+      "memberNodeKeys": [
+        "11Battery#67"
+      ],
+      "derivedFrom": "core rule: everything outside the rotor claim radius matching section:power"
+    },
+    "section:avionics": {
+      "displayName": "Avionics Stack",
+      "description": "Flight controller, radio, power distribution boards and the four speed controllers, stacked between the frame plates.",
+      "memberNodeKeys": [
+        "3Distribution_Board#0",
+        "3Distribution_Board_1#6",
+        "12Electrical_Unit#7",
+        "13_Electrical_Unit_2#8",
+        "7Electrical_Connector#55",
+        "7Electrical_Connector_1#58",
+        "7Electrical_Connector_2#59",
+        "7Electrical_Connector_3#60"
+      ],
+      "derivedFrom": "core rule: everything outside the rotor claim radius matching section:avionics"
+    },
+    "section:frame": {
+      "displayName": "Centre Frame",
+      "description": "The plate sandwich every arm and every load path passes through, with its standoffs and fasteners.",
+      "memberNodeKeys": [
+        "1_Spider_Base#1",
+        "6Spacer#2",
+        "6Spacer_1#3",
+        "6Spacer_2#4",
+        "6Spacer_3#5",
+        "pan_cross_head_am_B1867M_-_M2_x_04_x_13_Type_I_Cross_Recessed_PHMS_--13N#9",
+        "pan_cross_head_am_B1867M_-_M2_x_04_x_13_Type_I_Cross_Recessed_PHMS_--13N_1#10",
+        "pan_cross_head_am_B1867M_-_M2_x_04_x_13_Type_I_Cross_Recessed_PHMS_--13N_2#11",
+        "pan_cross_head_am_B1867M_-_M2_x_04_x_13_Type_I_Cross_Recessed_PHMS_--13N_3#12",
+        "2_Spider_top#14",
+        "pan_cross_head_am_B1867M_-_M3_x_05_x_30_Type_I_Cross_Recessed_PHMS_--30N#15",
+        "pan_cross_head_am_B1867M_-_M3_x_05_x_30_Type_I_Cross_Recessed_PHMS_--30N_1#16",
+        "hex_nut_style_2_am_B18242M_-_Hex_nut,_Style_2,__M3_x_05_--D-N#17",
+        "hex_nut_style_2_am_B18242M_-_Hex_nut,_Style_2,__M3_x_05_--D-N_1#18",
+        "hex_nut_style_2_am_B18242M_-_Hex_nut,_Style_2,__M3_x_05_--D-N_2#34",
+        "hex_nut_style_2_am_B18242M_-_Hex_nut,_Style_2,__M3_x_05_--D-N_3#35",
+        "hex_nut_style_2_am_B18242M_-_Hex_nut,_Style_2,__M3_x_05_--D-N_4#36",
+        "hex_nut_style_2_am_B18242M_-_Hex_nut,_Style_2,__M3_x_05_--D-N_5#37",
+        "hex_nut_style_2_am_B18242M_-_Hex_nut,_Style_2,__M3_x_05_--D-N_6#38",
+        "hex_nut_style_2_am_B18242M_-_Hex_nut,_Style_2,__M3_x_05_--D-N_7#39",
+        "pan_cross_head_am_B1867M_-_M3_x_05_x_30_Type_I_Cross_Recessed_PHMS_--30N_2#40",
+        "pan_cross_head_am_B1867M_-_M3_x_05_x_30_Type_I_Cross_Recessed_PHMS_--30N_3#41",
+        "pan_cross_head_am_B1867M_-_M3_x_05_x_30_Type_I_Cross_Recessed_PHMS_--30N_4#42",
+        "pan_cross_head_am_B1867M_-_M3_x_05_x_30_Type_I_Cross_Recessed_PHMS_--30N_5#43",
+        "pan_cross_head_am_B1867M_-_M3_x_05_x_30_Type_I_Cross_Recessed_PHMS_--30N_6#44",
+        "pan_cross_head_am_B1867M_-_M3_x_05_x_30_Type_I_Cross_Recessed_PHMS_--30N_7#45"
+      ],
+      "derivedFrom": "core rule: everything outside the rotor claim radius matching section:frame"
+    }
+  },
+  "physical": {
+    "spanM": 0.277,
+    "spanLabel": "rotor tip to rotor tip, diagonal",
+    "provenance": "measured",
+    "note": "Longest bounding-box dimension of the GLB (276.8), with the length unit MM read from Final.STEP."
+  }
+}

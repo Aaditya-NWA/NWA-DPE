@@ -1,0 +1,492 @@
+{
+  "schemaVersion": 5,
+  "productId": "axom_h6",
+  "productName": "AXOM H6",
+  "note": "Geometry is a public GrabCAD surveillance hexacopter sample standing in for a real AXOM airframe, converted from IGES (the snapshot ships no STEP). IGES carries no part names at all, so every solid arrives as `part_N` and each rotor group below was resolved purely by XZ position against the six rotor centres — see docs/MEMORY.md. Solids whose function geometry does not make obvious are deliberately left unauthored rather than given an invented name. All `website` figures are illustrative placeholders, not specifications.",
+  "parts": {
+    "part_35#35": {
+      "displayName": "Rotor 1 — Forward",
+      "description": "Forward lift rotor on the aircraft centreline. Six rotors let the aircraft stay controllable after a single rotor failure, which is why this class is used for payload work over people or property.",
+      "memberNodeKeys": [
+        "part_41#41",
+        "part_20#20",
+        "part_28#28",
+        "part_35#35"
+      ],
+      "rig": {
+        "fixedNodeKeys": [
+          "part_41#41",
+          "part_20#20",
+          "part_28#28"
+        ],
+        "spinningNodeKeys": [
+          "part_35#35"
+        ]
+      },
+      "specs": [
+        {
+          "label": "Solids",
+          "value": "4",
+          "provenance": "measured",
+          "note": "Distinct nodes in this component."
+        },
+        {
+          "label": "Rotating / fixed",
+          "value": "1 / 3",
+          "provenance": "measured",
+          "note": "Verified separable in the CAD — this is what makes RPM control possible."
+        },
+        {
+          "label": "Blade pitch",
+          "value": "Fixed (blades fused)",
+          "provenance": "measured",
+          "note": "Both blades are one watertight solid with no separable mesh island, so a rigid pitch is geometrically impossible here."
+        }
+      ]
+    },
+    "part_31#31": {
+      "displayName": "Rotor 2 — Forward Starboard",
+      "description": "Forward-starboard lift rotor. Rotation direction alternates around the hexagon so that yaw torque sums to zero in the hover.",
+      "memberNodeKeys": [
+        "part_40#40",
+        "part_19#19",
+        "part_26#26",
+        "part_31#31"
+      ],
+      "rig": {
+        "fixedNodeKeys": [
+          "part_40#40",
+          "part_19#19",
+          "part_26#26"
+        ],
+        "spinningNodeKeys": [
+          "part_31#31"
+        ]
+      },
+      "specs": [
+        {
+          "label": "Solids",
+          "value": "4",
+          "provenance": "measured",
+          "note": "Distinct nodes in this component."
+        },
+        {
+          "label": "Rotating / fixed",
+          "value": "1 / 3",
+          "provenance": "measured",
+          "note": "Verified separable in the CAD — this is what makes RPM control possible."
+        },
+        {
+          "label": "Blade pitch",
+          "value": "Fixed (blades fused)",
+          "provenance": "measured",
+          "note": "Both blades are one watertight solid with no separable mesh island, so a rigid pitch is geometrically impossible here."
+        }
+      ]
+    },
+    "part_36#36": {
+      "displayName": "Rotor 3 — Aft Starboard",
+      "description": "Aft-starboard lift rotor.",
+      "memberNodeKeys": [
+        "part_39#39",
+        "part_22#22",
+        "part_27#27",
+        "part_36#36"
+      ],
+      "rig": {
+        "fixedNodeKeys": [
+          "part_39#39",
+          "part_22#22",
+          "part_27#27"
+        ],
+        "spinningNodeKeys": [
+          "part_36#36"
+        ]
+      },
+      "specs": [
+        {
+          "label": "Solids",
+          "value": "4",
+          "provenance": "measured",
+          "note": "Distinct nodes in this component."
+        },
+        {
+          "label": "Rotating / fixed",
+          "value": "1 / 3",
+          "provenance": "measured",
+          "note": "Verified separable in the CAD — this is what makes RPM control possible."
+        },
+        {
+          "label": "Blade pitch",
+          "value": "Fixed (blades fused)",
+          "provenance": "measured",
+          "note": "Both blades are one watertight solid with no separable mesh island, so a rigid pitch is geometrically impossible here."
+        }
+      ]
+    },
+    "part_32#32": {
+      "displayName": "Rotor 4 — Aft",
+      "description": "Aft lift rotor on the aircraft centreline.",
+      "memberNodeKeys": [
+        "part_42#42",
+        "part_24#24",
+        "part_25#25",
+        "part_32#32"
+      ],
+      "rig": {
+        "fixedNodeKeys": [
+          "part_42#42",
+          "part_24#24",
+          "part_25#25"
+        ],
+        "spinningNodeKeys": [
+          "part_32#32"
+        ]
+      },
+      "specs": [
+        {
+          "label": "Solids",
+          "value": "4",
+          "provenance": "measured",
+          "note": "Distinct nodes in this component."
+        },
+        {
+          "label": "Rotating / fixed",
+          "value": "1 / 3",
+          "provenance": "measured",
+          "note": "Verified separable in the CAD — this is what makes RPM control possible."
+        },
+        {
+          "label": "Blade pitch",
+          "value": "Fixed (blades fused)",
+          "provenance": "measured",
+          "note": "Both blades are one watertight solid with no separable mesh island, so a rigid pitch is geometrically impossible here."
+        }
+      ]
+    },
+    "part_33#33": {
+      "displayName": "Rotor 5 — Aft Port",
+      "description": "Aft-port lift rotor.",
+      "memberNodeKeys": [
+        "part_38#38",
+        "part_23#23",
+        "part_30#30",
+        "part_33#33"
+      ],
+      "rig": {
+        "fixedNodeKeys": [
+          "part_38#38",
+          "part_23#23",
+          "part_30#30"
+        ],
+        "spinningNodeKeys": [
+          "part_33#33"
+        ]
+      },
+      "specs": [
+        {
+          "label": "Solids",
+          "value": "4",
+          "provenance": "measured",
+          "note": "Distinct nodes in this component."
+        },
+        {
+          "label": "Rotating / fixed",
+          "value": "1 / 3",
+          "provenance": "measured",
+          "note": "Verified separable in the CAD — this is what makes RPM control possible."
+        },
+        {
+          "label": "Blade pitch",
+          "value": "Fixed (blades fused)",
+          "provenance": "measured",
+          "note": "Both blades are one watertight solid with no separable mesh island, so a rigid pitch is geometrically impossible here."
+        }
+      ]
+    },
+    "part_34#34": {
+      "displayName": "Rotor 6 — Forward Port",
+      "description": "Forward-port lift rotor. At 509 mm diameter these are the largest rotors in the AXOM range, which is what gives this airframe its payload and its low disc loading.",
+      "memberNodeKeys": [
+        "part_43#43",
+        "part_21#21",
+        "part_29#29",
+        "part_34#34"
+      ],
+      "rig": {
+        "fixedNodeKeys": [
+          "part_43#43",
+          "part_21#21",
+          "part_29#29"
+        ],
+        "spinningNodeKeys": [
+          "part_34#34"
+        ]
+      },
+      "specs": [
+        {
+          "label": "Solids",
+          "value": "4",
+          "provenance": "measured",
+          "note": "Distinct nodes in this component."
+        },
+        {
+          "label": "Rotating / fixed",
+          "value": "1 / 3",
+          "provenance": "measured",
+          "note": "Verified separable in the CAD — this is what makes RPM control possible."
+        },
+        {
+          "label": "Blade pitch",
+          "value": "Fixed (blades fused)",
+          "provenance": "measured",
+          "note": "Both blades are one watertight solid with no separable mesh island, so a rigid pitch is geometrically impossible here."
+        }
+      ]
+    },
+    "part_0#0": {
+      "displayName": "Lower Centre Plate",
+      "description": "Lower half of the frame sandwich. All six booms are clamped between this plate and the upper plate."
+    },
+    "part_37#37": {
+      "displayName": "Upper Centre Plate",
+      "description": "Upper half of the frame sandwich, closing the boom clamps."
+    },
+    "part_50#50": {
+      "displayName": "Landing Gear — Starboard",
+      "description": "Tall starboard leg. The height exists to give the gimbal below the airframe clearance to rotate on the ground."
+    },
+    "part_51#51": {
+      "displayName": "Landing Gear — Port",
+      "description": "Tall port leg, mirroring the starboard side."
+    },
+    "part_52#52": {
+      "displayName": "GNSS Mast",
+      "description": "Raises the satellite navigation receiver clear of the airframe and its electrical noise."
+    },
+    "part_53#53": {
+      "displayName": "Camera Gimbal",
+      "description": "Stabilised gimbal slung under the centre plate. It isolates the sensor from airframe attitude, so the aircraft can pitch into wind while the camera stays level."
+    },
+    "part_54#54": {
+      "displayName": "Sensor Payload",
+      "description": "Imaging payload carried in the gimbal cradle."
+    }
+  },
+  "website": {
+    "tagline": "Six-rotor surveillance platform for long-endurance payload work.",
+    "mtowKg": {
+      "min": 6,
+      "max": 18
+    },
+    "keySpecs": [
+      {
+        "label": "Overall span",
+        "value": "1.50 m",
+        "provenance": "measured",
+        "note": "rotor tip to rotor tip, across the hexagon"
+      },
+      {
+        "label": "Configuration",
+        "value": "Hexarotor, gimbal-equipped",
+        "provenance": "measured",
+        "note": "6 drivable rotor rigs, none with variable pitch. Counted from the authored rigs."
+      },
+      {
+        "label": "Rotor circle",
+        "value": "1 390 mm"
+      },
+      {
+        "label": "Rotor diameter",
+        "value": "509 mm"
+      },
+      {
+        "label": "MTOW envelope",
+        "value": "6.0 – 18.0 kg"
+      },
+      {
+        "label": "Service ceiling",
+        "value": "6 000 m"
+      },
+      {
+        "label": "Endurance",
+        "value": "42 min"
+      }
+    ],
+    "datasheetUrl": "/datasheets/axom_h6.txt",
+    "flight": {
+      "ceilingM": 6000,
+      "maxVelocityMs": 20,
+      "phases": [
+        {
+          "label": "TAKEOFF",
+          "altitudeM": 0,
+          "velocityMs": 0,
+          "thrustN": 176,
+          "dragN": 0
+        },
+        {
+          "label": "CLIMB",
+          "altitudeM": 250,
+          "velocityMs": 6,
+          "thrustN": 155,
+          "dragN": 9.5
+        },
+        {
+          "label": "CRUISE",
+          "altitudeM": 1800,
+          "velocityMs": 16,
+          "thrustN": 126,
+          "dragN": 33.8
+        },
+        {
+          "label": "HIGH CRUISE",
+          "altitudeM": 3000,
+          "velocityMs": 15,
+          "thrustN": 133,
+          "dragN": 30.2
+        },
+        {
+          "label": "CEILING",
+          "altitudeM": 6000,
+          "velocityMs": 10,
+          "thrustN": 148,
+          "dragN": 17.6
+        }
+      ]
+    }
+  },
+  "sections": {
+    "section:rotor-1": {
+      "displayName": "Rotor Assembly 1 — Forward",
+      "description": "Complete rotor assembly: boom, motor, mount hardware and the propeller it drives.",
+      "memberNodeKeys": [
+        "part_3#3",
+        "part_20#20",
+        "part_28#28",
+        "part_35#35",
+        "part_41#41"
+      ],
+      "derivedFrom": "nearest rotor axis within 400 units of (-84.8, -321.6)"
+    },
+    "section:rotor-2": {
+      "displayName": "Rotor Assembly 2 — Forward Starboard",
+      "description": "Complete rotor assembly: boom, motor, mount hardware and the propeller it drives.",
+      "memberNodeKeys": [
+        "part_1#1",
+        "part_19#19",
+        "part_26#26",
+        "part_31#31",
+        "part_40#40"
+      ],
+      "derivedFrom": "nearest rotor axis within 400 units of (535.5, 60.6)"
+    },
+    "section:rotor-3": {
+      "displayName": "Rotor Assembly 3 — Aft Starboard",
+      "description": "Complete rotor assembly: boom, motor, mount hardware and the propeller it drives.",
+      "memberNodeKeys": [
+        "part_6#6",
+        "part_22#22",
+        "part_27#27",
+        "part_36#36",
+        "part_39#39"
+      ],
+      "derivedFrom": "nearest rotor axis within 400 units of (498.5, 748.7)"
+    },
+    "section:rotor-4": {
+      "displayName": "Rotor Assembly 4 — Aft",
+      "description": "Complete rotor assembly: boom, motor, mount hardware and the propeller it drives.",
+      "memberNodeKeys": [
+        "part_4#4",
+        "part_24#24",
+        "part_25#25",
+        "part_32#32",
+        "part_42#42"
+      ],
+      "derivedFrom": "nearest rotor axis within 400 units of (-87.0, 1063.9)"
+    },
+    "section:rotor-5": {
+      "displayName": "Rotor Assembly 5 — Aft Port",
+      "description": "Complete rotor assembly: boom, motor, mount hardware and the propeller it drives.",
+      "memberNodeKeys": [
+        "part_2#2",
+        "part_23#23",
+        "part_30#30",
+        "part_33#33",
+        "part_38#38"
+      ],
+      "derivedFrom": "nearest rotor axis within 400 units of (-700.7, 689.9)"
+    },
+    "section:rotor-6": {
+      "displayName": "Rotor Assembly 6 — Forward Port",
+      "description": "Complete rotor assembly: boom, motor, mount hardware and the propeller it drives.",
+      "memberNodeKeys": [
+        "part_5#5",
+        "part_21#21",
+        "part_29#29",
+        "part_34#34",
+        "part_43#43"
+      ],
+      "derivedFrom": "nearest rotor axis within 400 units of (-670.3, 0.4)"
+    },
+    "section:sensor": {
+      "displayName": "Sensor & Gimbal",
+      "description": "Stabilised gimbal, imaging payload and the GNSS mast above the airframe.",
+      "memberNodeKeys": [
+        "part_52#52",
+        "part_53#53",
+        "part_54#54"
+      ],
+      "derivedFrom": "core rule: everything outside the rotor claim radius matching section:sensor"
+    },
+    "section:landing-gear": {
+      "displayName": "Landing Gear",
+      "description": "Tall twin legs, sized to give the underslung gimbal ground clearance.",
+      "memberNodeKeys": [
+        "part_50#50",
+        "part_51#51"
+      ],
+      "derivedFrom": "core rule: everything outside the rotor claim radius matching section:landing-gear"
+    },
+    "section:avionics": {
+      "displayName": "Avionics & Payload Bay",
+      "description": "Enclosed centre body carrying the autopilot, power stage and payload interface.",
+      "memberNodeKeys": [
+        "part_44#44",
+        "part_45#45",
+        "part_46#46",
+        "part_47#47",
+        "part_48#48",
+        "part_49#49"
+      ],
+      "derivedFrom": "core rule: everything outside the rotor claim radius matching section:avionics"
+    },
+    "section:frame": {
+      "displayName": "Centre Frame",
+      "description": "Upper and lower centre plates and the twelve clamps that grip the six booms between them.",
+      "memberNodeKeys": [
+        "part_0#0",
+        "part_7#7",
+        "part_8#8",
+        "part_9#9",
+        "part_10#10",
+        "part_11#11",
+        "part_12#12",
+        "part_13#13",
+        "part_14#14",
+        "part_15#15",
+        "part_16#16",
+        "part_17#17",
+        "part_18#18",
+        "part_37#37"
+      ],
+      "derivedFrom": "core rule: everything outside the rotor claim radius matching section:frame"
+    }
+  },
+  "physical": {
+    "spanM": 1.505,
+    "spanLabel": "rotor tip to rotor tip, across the hexagon",
+    "provenance": "measured",
+    "note": "Longest bounding-box dimension of the GLB (1504.5), with the length unit MM read from Hexacopter Assembly.IGS."
+  }
+}

@@ -1,0 +1,732 @@
+{
+  "schemaVersion": 5,
+  "productId": "axom_x8",
+  "productName": "AXOM X8",
+  "note": "Geometry is a public GrabCAD X8 coaxial octorotor sample standing in for a real AXOM airframe. Canonical keys read from the converted GLB with cad-pipeline/inspect_glb_nodes.mjs. Coaxial pairing (which motor body and mount belong to which propeller) was resolved by matching XZ position and stack height, not by name order. All `website` figures are illustrative placeholders, not specifications.",
+  "parts": {
+    "propellor_stable3_2#92": {
+      "displayName": "Rotor 1U — Forward Upper",
+      "description": "Upper rotor of the forward coaxial pair. In an X8 each arm carries two rotors on a shared axis, so a single motor failure costs roughly half that arm's thrust rather than all of it.",
+      "memberNodeKeys": [
+        "part_87#87",
+        "motormount_2#91",
+        "propellor_stable3_2#92"
+      ],
+      "rig": {
+        "fixedNodeKeys": [
+          "part_87#87",
+          "motormount_2#91"
+        ],
+        "spinningNodeKeys": [
+          "propellor_stable3_2#92"
+        ]
+      },
+      "specs": [
+        {
+          "label": "Solids",
+          "value": "3",
+          "provenance": "measured",
+          "note": "Distinct nodes in this component."
+        },
+        {
+          "label": "Rotating / fixed",
+          "value": "1 / 2",
+          "provenance": "measured",
+          "note": "Verified separable in the CAD — this is what makes RPM control possible."
+        },
+        {
+          "label": "Blade pitch",
+          "value": "Fixed (blades fused)",
+          "provenance": "measured",
+          "note": "Both blades are one watertight solid with no separable mesh island, so a rigid pitch is geometrically impossible here."
+        }
+      ]
+    },
+    "propellor_stable3_5#129": {
+      "displayName": "Rotor 1L — Forward Lower",
+      "description": "Lower rotor of the forward coaxial pair, turning opposite to the upper. It works in the upper rotor's downwash, which is why a coaxial pair produces less thrust than two separated rotors of the same size.",
+      "memberNodeKeys": [
+        "part_124#124",
+        "motormount_5#128",
+        "propellor_stable3_5#129"
+      ],
+      "rig": {
+        "fixedNodeKeys": [
+          "part_124#124",
+          "motormount_5#128"
+        ],
+        "spinningNodeKeys": [
+          "propellor_stable3_5#129"
+        ]
+      },
+      "specs": [
+        {
+          "label": "Solids",
+          "value": "3",
+          "provenance": "measured",
+          "note": "Distinct nodes in this component."
+        },
+        {
+          "label": "Rotating / fixed",
+          "value": "1 / 2",
+          "provenance": "measured",
+          "note": "Verified separable in the CAD — this is what makes RPM control possible."
+        },
+        {
+          "label": "Blade pitch",
+          "value": "Fixed (blades fused)",
+          "provenance": "measured",
+          "note": "Both blades are one watertight solid with no separable mesh island, so a rigid pitch is geometrically impossible here."
+        }
+      ]
+    },
+    "propellor_stable3_1#82": {
+      "displayName": "Rotor 2U — Starboard Upper",
+      "description": "Upper rotor of the starboard coaxial pair.",
+      "memberNodeKeys": [
+        "part_77#77",
+        "motormount_1#81",
+        "propellor_stable3_1#82"
+      ],
+      "rig": {
+        "fixedNodeKeys": [
+          "part_77#77",
+          "motormount_1#81"
+        ],
+        "spinningNodeKeys": [
+          "propellor_stable3_1#82"
+        ]
+      },
+      "specs": [
+        {
+          "label": "Solids",
+          "value": "3",
+          "provenance": "measured",
+          "note": "Distinct nodes in this component."
+        },
+        {
+          "label": "Rotating / fixed",
+          "value": "1 / 2",
+          "provenance": "measured",
+          "note": "Verified separable in the CAD — this is what makes RPM control possible."
+        },
+        {
+          "label": "Blade pitch",
+          "value": "Fixed (blades fused)",
+          "provenance": "measured",
+          "note": "Both blades are one watertight solid with no separable mesh island, so a rigid pitch is geometrically impossible here."
+        }
+      ]
+    },
+    "propellor_stable3#72": {
+      "displayName": "Rotor 2L — Starboard Lower",
+      "description": "Lower rotor of the starboard coaxial pair.",
+      "memberNodeKeys": [
+        "part_67#67",
+        "motormount#71",
+        "propellor_stable3#72"
+      ],
+      "rig": {
+        "fixedNodeKeys": [
+          "part_67#67",
+          "motormount#71"
+        ],
+        "spinningNodeKeys": [
+          "propellor_stable3#72"
+        ]
+      },
+      "specs": [
+        {
+          "label": "Solids",
+          "value": "3",
+          "provenance": "measured",
+          "note": "Distinct nodes in this component."
+        },
+        {
+          "label": "Rotating / fixed",
+          "value": "1 / 2",
+          "provenance": "measured",
+          "note": "Verified separable in the CAD — this is what makes RPM control possible."
+        },
+        {
+          "label": "Blade pitch",
+          "value": "Fixed (blades fused)",
+          "provenance": "measured",
+          "note": "Both blades are one watertight solid with no separable mesh island, so a rigid pitch is geometrically impossible here."
+        }
+      ]
+    },
+    "propellor_stable3_4#112": {
+      "displayName": "Rotor 3U — Aft Upper",
+      "description": "Upper rotor of the aft coaxial pair.",
+      "memberNodeKeys": [
+        "part_107#107",
+        "motormount_4#111",
+        "propellor_stable3_4#112"
+      ],
+      "rig": {
+        "fixedNodeKeys": [
+          "part_107#107",
+          "motormount_4#111"
+        ],
+        "spinningNodeKeys": [
+          "propellor_stable3_4#112"
+        ]
+      },
+      "specs": [
+        {
+          "label": "Solids",
+          "value": "3",
+          "provenance": "measured",
+          "note": "Distinct nodes in this component."
+        },
+        {
+          "label": "Rotating / fixed",
+          "value": "1 / 2",
+          "provenance": "measured",
+          "note": "Verified separable in the CAD — this is what makes RPM control possible."
+        },
+        {
+          "label": "Blade pitch",
+          "value": "Fixed (blades fused)",
+          "provenance": "measured",
+          "note": "Both blades are one watertight solid with no separable mesh island, so a rigid pitch is geometrically impossible here."
+        }
+      ]
+    },
+    "propellor_stable3_7#149": {
+      "displayName": "Rotor 3L — Aft Lower",
+      "description": "Lower rotor of the aft coaxial pair.",
+      "memberNodeKeys": [
+        "part_144#144",
+        "motormount_7#148",
+        "propellor_stable3_7#149"
+      ],
+      "rig": {
+        "fixedNodeKeys": [
+          "part_144#144",
+          "motormount_7#148"
+        ],
+        "spinningNodeKeys": [
+          "propellor_stable3_7#149"
+        ]
+      },
+      "specs": [
+        {
+          "label": "Solids",
+          "value": "3",
+          "provenance": "measured",
+          "note": "Distinct nodes in this component."
+        },
+        {
+          "label": "Rotating / fixed",
+          "value": "1 / 2",
+          "provenance": "measured",
+          "note": "Verified separable in the CAD — this is what makes RPM control possible."
+        },
+        {
+          "label": "Blade pitch",
+          "value": "Fixed (blades fused)",
+          "provenance": "measured",
+          "note": "Both blades are one watertight solid with no separable mesh island, so a rigid pitch is geometrically impossible here."
+        }
+      ]
+    },
+    "propellor_stable3_3#102": {
+      "displayName": "Rotor 4U — Port Upper",
+      "description": "Upper rotor of the port coaxial pair.",
+      "memberNodeKeys": [
+        "part_97#97",
+        "motormount_3#101",
+        "propellor_stable3_3#102"
+      ],
+      "rig": {
+        "fixedNodeKeys": [
+          "part_97#97",
+          "motormount_3#101"
+        ],
+        "spinningNodeKeys": [
+          "propellor_stable3_3#102"
+        ]
+      },
+      "specs": [
+        {
+          "label": "Solids",
+          "value": "3",
+          "provenance": "measured",
+          "note": "Distinct nodes in this component."
+        },
+        {
+          "label": "Rotating / fixed",
+          "value": "1 / 2",
+          "provenance": "measured",
+          "note": "Verified separable in the CAD — this is what makes RPM control possible."
+        },
+        {
+          "label": "Blade pitch",
+          "value": "Fixed (blades fused)",
+          "provenance": "measured",
+          "note": "Both blades are one watertight solid with no separable mesh island, so a rigid pitch is geometrically impossible here."
+        }
+      ]
+    },
+    "propellor_stable3_6#139": {
+      "displayName": "Rotor 4L — Port Lower",
+      "description": "Lower rotor of the port coaxial pair.",
+      "memberNodeKeys": [
+        "part_134#134",
+        "motormount_6#138",
+        "propellor_stable3_6#139"
+      ],
+      "rig": {
+        "fixedNodeKeys": [
+          "part_134#134",
+          "motormount_6#138"
+        ],
+        "spinningNodeKeys": [
+          "propellor_stable3_6#139"
+        ]
+      },
+      "specs": [
+        {
+          "label": "Solids",
+          "value": "3",
+          "provenance": "measured",
+          "note": "Distinct nodes in this component."
+        },
+        {
+          "label": "Rotating / fixed",
+          "value": "1 / 2",
+          "provenance": "measured",
+          "note": "Verified separable in the CAD — this is what makes RPM control possible."
+        },
+        {
+          "label": "Blade pitch",
+          "value": "Fixed (blades fused)",
+          "provenance": "measured",
+          "note": "Both blades are one watertight solid with no separable mesh island, so a rigid pitch is geometrically impossible here."
+        }
+      ]
+    },
+    "truba15_560#0": {
+      "displayName": "Main Spine Tube",
+      "description": "Longitudinal 15 mm carbon tube forming the airframe spine. The two lateral tubes cross it at the centre plate to make the four-arm cruciform."
+    },
+    "truba15_275#1": {
+      "displayName": "Lateral Boom — Starboard",
+      "description": "Starboard half of the lateral boom pair."
+    },
+    "truba15_275_1#2": {
+      "displayName": "Lateral Boom — Port",
+      "description": "Port half of the lateral boom pair."
+    },
+    "plastina#3": {
+      "displayName": "Centre Plate",
+      "description": "Clamps the spine and lateral tubes together and carries the avionics stack. Every arm load passes through this plate."
+    },
+    "power_plate#158": {
+      "displayName": "Power Distribution Plate",
+      "description": "Copper-plane board splitting pack current to the eight speed controllers."
+    },
+    "apm2_5#160": {
+      "displayName": "Flight Controller",
+      "description": "Autopilot board carrying the inertial sensors and barometer. Its barometric altitude is what a real ceiling limit would be enforced against."
+    },
+    "GPS#196": {
+      "displayName": "GNSS Receiver",
+      "description": "Satellite navigation receiver, raised above the airframe on its own plate to keep it clear of electrical noise from the power stage."
+    },
+    "gps_plate#197": {
+      "displayName": "GNSS Mast Plate",
+      "description": "Standoff plate lifting the GNSS receiver above the avionics stack."
+    },
+    "radio#212": {
+      "displayName": "Telemetry Radio",
+      "description": "Bidirectional command and telemetry link to the ground station."
+    },
+    "LiPo#209": {
+      "displayName": "Flight Battery 1",
+      "description": "First of two lithium-polymer packs. Splitting the pack in two lets the mass sit symmetrically either side of the centre plate."
+    },
+    "LiPo_1#211": {
+      "displayName": "Flight Battery 2",
+      "description": "Second lithium-polymer pack, mounted opposite the first."
+    },
+    "esc#204": {
+      "displayName": "Speed Controller Bank A",
+      "description": "Electronic speed controllers for the upper rotor set."
+    },
+    "esc_1#205": {
+      "displayName": "Speed Controller Bank B",
+      "description": "Electronic speed controllers for the lower rotor set."
+    },
+    "ugolok350#29": {
+      "displayName": "Landing Skid — Starboard",
+      "description": "Angled skid spreading touchdown load across the two starboard legs."
+    },
+    "ugolok350_1#30": {
+      "displayName": "Landing Skid — Port",
+      "description": "Angled skid spreading touchdown load across the two port legs."
+    }
+  },
+  "website": {
+    "tagline": "Coaxial octorotor with rotor-out redundancy for heavier payloads.",
+    "mtowKg": {
+      "min": 2,
+      "max": 6
+    },
+    "keySpecs": [
+      {
+        "label": "Overall span",
+        "value": "0.75 m",
+        "provenance": "measured",
+        "note": "rotor tip to rotor tip, diagonal"
+      },
+      {
+        "label": "Configuration",
+        "value": "X8 coaxial, 8 rotors",
+        "provenance": "measured",
+        "note": "8 drivable rotor rigs, none with variable pitch. Counted from the authored rigs."
+      },
+      {
+        "label": "Motor spacing",
+        "value": "508 mm"
+      },
+      {
+        "label": "Rotor diameter",
+        "value": "243 mm"
+      },
+      {
+        "label": "MTOW envelope",
+        "value": "2.0 – 6.0 kg"
+      },
+      {
+        "label": "Service ceiling",
+        "value": "5 200 m"
+      },
+      {
+        "label": "Endurance",
+        "value": "31 min"
+      }
+    ],
+    "datasheetUrl": "/datasheets/axom_x8.txt",
+    "flight": {
+      "ceilingM": 5200,
+      "maxVelocityMs": 24,
+      "phases": [
+        {
+          "label": "TAKEOFF",
+          "altitudeM": 0,
+          "velocityMs": 0,
+          "thrustN": 62,
+          "dragN": 0
+        },
+        {
+          "label": "CLIMB",
+          "altitudeM": 200,
+          "velocityMs": 7,
+          "thrustN": 54.6,
+          "dragN": 3.8
+        },
+        {
+          "label": "CRUISE",
+          "altitudeM": 1500,
+          "velocityMs": 19,
+          "thrustN": 44.5,
+          "dragN": 13.9
+        },
+        {
+          "label": "HIGH CRUISE",
+          "altitudeM": 3000,
+          "velocityMs": 17,
+          "thrustN": 47.8,
+          "dragN": 12.1
+        },
+        {
+          "label": "CEILING",
+          "altitudeM": 5200,
+          "velocityMs": 12,
+          "thrustN": 52.4,
+          "dragN": 7.4
+        }
+      ]
+    }
+  },
+  "sections": {
+    "section:rotor-1": {
+      "displayName": "Rotor Arm 1 — Forward",
+      "description": "Coaxial rotor arm: two counter-rotating rotors on one axis, their motors, mounts and the boom carrying them.",
+      "memberNodeKeys": [
+        "䡩랠_20#57",
+        "m3x6_3#58",
+        "part_87#87",
+        "part_88#88",
+        "part_89#89",
+        "part_90#90",
+        "motormount_2#91",
+        "propellor_stable3_2#92",
+        "m3x6_konus_8#93",
+        "m3x6_konus_9#94",
+        "m3x6_konus_10#95",
+        "m3x6_konus_11#96",
+        "part_124#124",
+        "part_125#125",
+        "part_126#126",
+        "part_127#127",
+        "motormount_5#128",
+        "propellor_stable3_5#129",
+        "m3x6_konus_20#130",
+        "m3x6_konus_21#131",
+        "m3x6_konus_22#132",
+        "m3x6_konus_23#133"
+      ],
+      "derivedFrom": "nearest rotor axis within 140 units of (-37.6, -294.9)"
+    },
+    "section:rotor-2": {
+      "displayName": "Rotor Arm 2 — Starboard",
+      "description": "Coaxial rotor arm: two counter-rotating rotors on one axis, their motors, mounts and the boom carrying them.",
+      "memberNodeKeys": [
+        "truba15_275#1",
+        "m3x6_4#59",
+        "䡩랠_21#60",
+        "m3x25#63",
+        "䡩랠_23#64",
+        "m3x25_1#65",
+        "䡩랠_24#66",
+        "part_67#67",
+        "part_68#68",
+        "part_69#69",
+        "part_70#70",
+        "motormount#71",
+        "propellor_stable3#72",
+        "m3x6_konus#73",
+        "m3x6_konus_1#74",
+        "m3x6_konus_2#75",
+        "m3x6_konus_3#76",
+        "part_77#77",
+        "part_78#78",
+        "part_79#79",
+        "part_80#80",
+        "motormount_1#81",
+        "propellor_stable3_1#82",
+        "m3x6_konus_4#83",
+        "m3x6_konus_5#84",
+        "m3x6_konus_6#85",
+        "m3x6_konus_7#86",
+        "䡩랠_25#118",
+        "䡩랠_26#119",
+        "䡩랠_27#120",
+        "m3x25_2#121",
+        "m3x25_3#122",
+        "m3x25_4#123"
+      ],
+      "derivedFrom": "nearest rotor axis within 140 units of (216.4, -40.9)"
+    },
+    "section:rotor-3": {
+      "displayName": "Rotor Arm 3 — Aft",
+      "description": "Coaxial rotor arm: two counter-rotating rotors on one axis, their motors, mounts and the boom carrying them.",
+      "memberNodeKeys": [
+        "䡩랠_22#61",
+        "m3x6_5#62",
+        "part_107#107",
+        "part_108#108",
+        "part_109#109",
+        "part_110#110",
+        "motormount_4#111",
+        "propellor_stable3_4#112",
+        "m3x6_konus_16#113",
+        "m3x6_konus_17#114",
+        "m3x6_konus_18#115",
+        "m3x6_konus_19#116",
+        "part_144#144",
+        "part_145#145",
+        "part_146#146",
+        "part_147#147",
+        "motormount_7#148",
+        "propellor_stable3_7#149",
+        "m3x6_konus_28#150",
+        "m3x6_konus_29#151",
+        "m3x6_konus_30#152",
+        "m3x6_konus_31#153"
+      ],
+      "derivedFrom": "nearest rotor axis within 140 units of (-37.6, 213.1)"
+    },
+    "section:rotor-4": {
+      "displayName": "Rotor Arm 4 — Port",
+      "description": "Coaxial rotor arm: two counter-rotating rotors on one axis, their motors, mounts and the boom carrying them.",
+      "memberNodeKeys": [
+        "truba15_275_1#2",
+        "m3x6_2#55",
+        "䡩랠_19#56",
+        "part_97#97",
+        "part_98#98",
+        "part_99#99",
+        "part_100#100",
+        "motormount_3#101",
+        "propellor_stable3_3#102",
+        "m3x6_konus_12#103",
+        "m3x6_konus_13#104",
+        "m3x6_konus_14#105",
+        "m3x6_konus_15#106",
+        "part_134#134",
+        "part_135#135",
+        "part_136#136",
+        "part_137#137",
+        "motormount_6#138",
+        "propellor_stable3_6#139",
+        "m3x6_konus_24#140",
+        "m3x6_konus_25#141",
+        "m3x6_konus_26#142",
+        "m3x6_konus_27#143"
+      ],
+      "derivedFrom": "nearest rotor axis within 140 units of (-291.6, -40.9)"
+    },
+    "section:landing-gear": {
+      "displayName": "Landing Gear",
+      "description": "Four vertical legs, their frame brackets and the two angled skids that spread touchdown load into the airframe.",
+      "memberNodeKeys": [
+        "kronshteyn#21",
+        "kronshteyn_1#22",
+        "truba10_200#23",
+        "truba10_200_1#24",
+        "kronshteyn_2#25",
+        "kronshteyn_3#26",
+        "truba10_200_2#27",
+        "truba10_200_3#28",
+        "ugolok350#29",
+        "ugolok350_1#30"
+      ],
+      "derivedFrom": "core rule: everything outside the rotor claim radius matching section:landing-gear"
+    },
+    "section:power": {
+      "displayName": "Power Bay",
+      "description": "Twin lithium-polymer packs and their brackets, mounted symmetrically either side of the centre plate.",
+      "memberNodeKeys": [
+        "accu_kronsht#208",
+        "LiPo#209",
+        "accu_kronsht_1#210",
+        "LiPo_1#211"
+      ],
+      "derivedFrom": "core rule: everything outside the rotor claim radius matching section:power"
+    },
+    "section:avionics": {
+      "displayName": "Avionics Stack",
+      "description": "Autopilot, GNSS receiver, telemetry radio, speed controllers and the power distribution plate.",
+      "memberNodeKeys": [
+        "power_plate#158",
+        "apm2_5#160",
+        "GPS#196",
+        "gps_plate#197",
+        "esc#204",
+        "esc_1#205",
+        "esc_2#206",
+        "esc_3#207",
+        "radio#212"
+      ],
+      "derivedFrom": "core rule: everything outside the rotor claim radius matching section:avionics"
+    },
+    "section:frame": {
+      "displayName": "Centre Frame",
+      "description": "Spine tube, centre plate and the clamp hardware holding the cruciform together.",
+      "memberNodeKeys": [
+        "truba15_560#0",
+        "plastina#3",
+        "truba10_129#4",
+        "truba10_129_1#5",
+        "shina#6",
+        "m3x20#7",
+        "䡩랠#8",
+        "m3x20_1#9",
+        "m3x20_2#10",
+        "m3x20_3#11",
+        "䡩랠_1#12",
+        "䡩랠_2#13",
+        "䡩랠_3#14",
+        "m3x6#15",
+        "䡩랠_4#16",
+        "䡩랠_5#17",
+        "m3x6_1#18",
+        "m3x20_4#19",
+        "䡩랠_6#20",
+        "m3x20_5#31",
+        "䡩랠_7#32",
+        "m3x20_6#33",
+        "䡩랠_8#34",
+        "䡩랠_9#35",
+        "m3x20_7#36",
+        "䡩랠_10#37",
+        "m3x20_8#38",
+        "m3x20_9#39",
+        "䡩랠_11#40",
+        "䡩랠_12#41",
+        "m3x20_10#42",
+        "䡩랠_13#43",
+        "䡩랠_14#44",
+        "䡩랠_15#45",
+        "䡩랠_16#46",
+        "䡩랠_17#47",
+        "䡩랠_18#48",
+        "m3x20_11#49",
+        "m3x20_12#50",
+        "m3x20_13#51",
+        "m3x20_14#52",
+        "m3x20_15#53",
+        "m3x20_16#54",
+        "canopy#117",
+        "m3x20_17#154",
+        "part_155#155",
+        "part_156#156",
+        "䡩랠_28#157",
+        "䡩랠_29#159",
+        "part_161#161",
+        "part_162#162",
+        "part_163#163",
+        "part_164#164",
+        "m3x6_6#165",
+        "m3x6_7#166",
+        "m3x6_8#167",
+        "m3x6_9#168",
+        "part_169#169",
+        "part_170#170",
+        "part_171#171",
+        "part_172#172",
+        "part_173#173",
+        "part_174#174",
+        "part_175#175",
+        "part_176#176",
+        "part_177#177",
+        "part_178#178",
+        "part_179#179",
+        "part_180#180",
+        "m3x20_18#181",
+        "m3x20_19#182",
+        "m3x20_20#183",
+        "䡩랠_30#184",
+        "䡩랠_31#185",
+        "䡩랠_32#186",
+        "part_187#187",
+        "part_188#188",
+        "part_189#189",
+        "part_190#190",
+        "part_191#191",
+        "part_192#192",
+        "m3x6_10#193",
+        "䡩랠_33#194",
+        "䡩랠_34#195",
+        "䡩랠_35#198",
+        "䡩랠_36#199",
+        "䡩랠_37#200",
+        "m3x6_11#201",
+        "䡩랠_38#202",
+        "䡩랠_39#203"
+      ],
+      "derivedFrom": "core rule: everything outside the rotor claim radius matching section:frame"
+    }
+  },
+  "physical": {
+    "spanM": 0.751,
+    "spanLabel": "rotor tip to rotor tip, diagonal",
+    "provenance": "measured",
+    "note": "Longest bounding-box dimension of the GLB (751.0), with the length unit MM read from X8-quadrocopter.STEP."
+  }
+}

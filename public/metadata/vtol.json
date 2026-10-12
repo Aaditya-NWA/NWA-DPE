@@ -1,0 +1,736 @@
+{
+  "productId": "vtol-uav-with-batteries",
+  "productName": "VTOL UAV (sample assembly)",
+  "schemaVersion": 5,
+  "note": "PoC V2.0 test asset — a public GrabCAD sample, not a real NWA product. Schema v2 (2026-07-27): parts are now keyed by canonical `name#index` (see types/product.ts) because 117 of this assembly's 409 real nodes share a name with another node elsewhere in the file — confirmed directly against the GLB, not assumed. The 5 propeller components below (4 corner + 1 middle) are the ONLY parts in this file with an authored `rig` — Try RPM appears nowhere else, by design. Every hub/prop pairing was verified against real vertex/position data (matching x,z coordinates between each propeller and its hub bracket) before being authored here, not guessed from names alone. Most of the assembly's 409 solids still have no authored entry and will show the raw part-number fallback — real production use needs full authoring by someone familiar with the actual product, per MEMORY.md's resourcing finding. SCHEMA v3 (2026-07-30): adds a `sections` layer above `parts` for hierarchical selection — on the assembly screen a click now selects the aircraft section a solid belongs to, and individual solids stay selectable inside the isolated detail view. `parts` is unchanged apart from two corrected propeller labels; the 5 rigs are untouched, so RPM CONTROL and the whole-assembly spin still read exactly the same 5 definitions. Section membership is AUTHORED, never derived at runtime: it was generated once by cad-pipeline/generate_vtol_sections.mjs from geometry bounding boxes (these solids have identity transforms, so node positions are useless) and is hand-editable from here on. Left/right labels follow +X forward and +Z right — corroborated by two of the four independently authored propeller names, but worth confirming against the real product.",
+  "parts": {
+    "33-14-10-00#146": {
+      "displayName": "Airframe Component 33-14-10-00",
+      "description": "Sample component from the VTOL test assembly. Placeholder description — not a verified engineering specification."
+    },
+    "33-53-05-00#353": {
+      "displayName": "Airframe Component 33-53-05-00",
+      "description": "Sample component from the VTOL test assembly. Placeholder description — not a verified engineering specification."
+    },
+    "33-54-11-00#130": {
+      "displayName": "Airframe Component 33-54-11-00 (left)",
+      "description": "Sample component from the VTOL test assembly. Placeholder description — not a verified engineering specification. This part's name is duplicated elsewhere in the assembly at a mirrored location (z=+500 vs this one's z=-500) — split into two separate authored entries (see the companion '(right)' entry) once that was discovered, so each is isolated on its own rather than both together."
+    },
+    "33-54-11-00_1#138": {
+      "displayName": "Airframe Component 33-54-11-00 (right)",
+      "description": "Sample component from the VTOL test assembly. Placeholder description — not a verified engineering specification. Mirror counterpart of the '(left)' entry above (same name, different location, z=+500) — see that entry's note."
+    },
+    "61-21-CCW#381": {
+      "displayName": "Lift Propeller — Front-Right (CCW)",
+      "description": "Counter-clockwise lift propeller, front-right position. Single fused prop solid mounted on its own hub bracket, verified as a separately modeled part — the two spin independently in the real assembly.",
+      "memberNodeKeys": [
+        "61-21-CCW#381",
+        "part_385#385"
+      ],
+      "rig": {
+        "fixedNodeKeys": [
+          "part_385#385"
+        ],
+        "spinningNodeKeys": [
+          "61-21-CCW#381"
+        ]
+      },
+      "specs": [
+        {
+          "label": "Solids",
+          "value": "2",
+          "provenance": "measured",
+          "note": "Distinct nodes in this component."
+        },
+        {
+          "label": "Rotating / fixed",
+          "value": "1 / 1",
+          "provenance": "measured",
+          "note": "Verified separable in the CAD — this is what makes RPM control possible."
+        },
+        {
+          "label": "Blade pitch",
+          "value": "Fixed (blades fused)",
+          "provenance": "measured",
+          "note": "Both blades are one watertight solid with no separable mesh island, so a rigid pitch is geometrically impossible here."
+        }
+      ]
+    },
+    "61-21-CCW_1#382": {
+      "displayName": "Lift Propeller — Rear-Left (CCW)",
+      "description": "Counter-clockwise lift propeller, rear-left position. Single fused prop solid mounted on its own hub bracket (part_403), verified by matching world position (x=-450.2, z=-500) between the two solids.",
+      "memberNodeKeys": [
+        "61-21-CCW_1#382",
+        "part_403#403"
+      ],
+      "rig": {
+        "fixedNodeKeys": [
+          "part_403#403"
+        ],
+        "spinningNodeKeys": [
+          "61-21-CCW_1#382"
+        ]
+      },
+      "specs": [
+        {
+          "label": "Solids",
+          "value": "2",
+          "provenance": "measured",
+          "note": "Distinct nodes in this component."
+        },
+        {
+          "label": "Rotating / fixed",
+          "value": "1 / 1",
+          "provenance": "measured",
+          "note": "Verified separable in the CAD — this is what makes RPM control possible."
+        },
+        {
+          "label": "Blade pitch",
+          "value": "Fixed (blades fused)",
+          "provenance": "measured",
+          "note": "Both blades are one watertight solid with no separable mesh island, so a rigid pitch is geometrically impossible here."
+        }
+      ]
+    },
+    "61-21-CW#383": {
+      "displayName": "Lift Propeller — Rear-Right (CW)",
+      "description": "Clockwise lift propeller, rear-right position. Single fused prop solid mounted on its own hub bracket, verified by matching world position (x=-450.2, z=500) between the two solids. Label corrected 2026-07-30: this entry previously read \"front-left\" while its own recorded coordinates say otherwise — with +X forward and +Z right, x=-450.2 is aft and z=+500 is right. It had swapped labels with the 61-21-CW_1#384 entry.",
+      "memberNodeKeys": [
+        "61-21-CW#383",
+        "part_397#397"
+      ],
+      "rig": {
+        "fixedNodeKeys": [
+          "part_397#397"
+        ],
+        "spinningNodeKeys": [
+          "61-21-CW#383"
+        ]
+      },
+      "specs": [
+        {
+          "label": "Solids",
+          "value": "2",
+          "provenance": "measured",
+          "note": "Distinct nodes in this component."
+        },
+        {
+          "label": "Rotating / fixed",
+          "value": "1 / 1",
+          "provenance": "measured",
+          "note": "Verified separable in the CAD — this is what makes RPM control possible."
+        },
+        {
+          "label": "Blade pitch",
+          "value": "Fixed (blades fused)",
+          "provenance": "measured",
+          "note": "Both blades are one watertight solid with no separable mesh island, so a rigid pitch is geometrically impossible here."
+        }
+      ]
+    },
+    "61-21-CW_1#384": {
+      "displayName": "Lift Propeller — Front-Left (CW)",
+      "description": "Clockwise lift propeller, front-left position. Single fused prop solid mounted on its own hub bracket, verified by matching world position (x=1089.8, z=-500) between the two solids. Label corrected 2026-07-30 — see the 61-21-CW#383 entry.",
+      "memberNodeKeys": [
+        "61-21-CW_1#384",
+        "part_391#391"
+      ],
+      "rig": {
+        "fixedNodeKeys": [
+          "part_391#391"
+        ],
+        "spinningNodeKeys": [
+          "61-21-CW_1#384"
+        ]
+      },
+      "specs": [
+        {
+          "label": "Solids",
+          "value": "2",
+          "provenance": "measured",
+          "note": "Distinct nodes in this component."
+        },
+        {
+          "label": "Rotating / fixed",
+          "value": "1 / 1",
+          "provenance": "measured",
+          "note": "Verified separable in the CAD — this is what makes RPM control possible."
+        },
+        {
+          "label": "Blade pitch",
+          "value": "Fixed (blades fused)",
+          "provenance": "measured",
+          "note": "Both blades are one watertight solid with no separable mesh island, so a rigid pitch is geometrically impossible here."
+        }
+      ]
+    },
+    "part_356#356": {
+      "displayName": "Middle Propeller Assembly (fuselage-mounted)",
+      "description": "The fuselage-centerline propeller, distinct from the 4 corner lift propellers — spins around the fuselage's longitudinal axis rather than vertically. Hub is two solids (part_356, the main hub body, and part_373, a smaller mount/spinner piece); the two blade solids (33-61-20-05, mirrored) spin together as one rigid body around the hub.",
+      "memberNodeKeys": [
+        "part_356#356",
+        "part_373#373",
+        "33-61-20-05#374",
+        "33-61-20-05_1#375"
+      ],
+      "rig": {
+        "fixedNodeKeys": [
+          "part_356#356",
+          "part_373#373"
+        ],
+        "spinningNodeKeys": [
+          "33-61-20-05#374",
+          "33-61-20-05_1#375"
+        ],
+        "pitch": {
+          "derivedFrom": "The ONLY rig on this aircraft whose blades are separate solids, so the only one that can pitch rigidly. Measured by cad-pipeline/analyze_blade_separability.mjs: 2 blades across 2 solids, 1 mesh island each, blade centres exactly 139.0 from the spin axis and 180 degrees apart. The 4 corner props are 2 blades fused into 1 watertight solid with no disconnected island to split on, so they author no pitch block and correctly show no pitch control.",
+          "bladeNodeKeys": [
+            "33-61-20-05#374",
+            "33-61-20-05_1#375"
+          ],
+          "hubTravelNodeKeys": [
+            "part_356#356",
+            "part_373#373"
+          ],
+          "hubTravel": 10,
+          "maxAngleDeg": 30
+        }
+      },
+      "specs": [
+        {
+          "label": "Solids",
+          "value": "4",
+          "provenance": "measured",
+          "note": "Distinct nodes in this component."
+        },
+        {
+          "label": "Rotating / fixed",
+          "value": "2 / 2",
+          "provenance": "measured",
+          "note": "Verified separable in the CAD — this is what makes RPM control possible."
+        },
+        {
+          "label": "Blade pitch",
+          "value": "Variable, ±30°",
+          "provenance": "measured",
+          "note": "Blades are separate solids, so a rigid pitch rotation is possible."
+        }
+      ]
+    }
+  },
+  "sections": {
+    "section:pod-fwd-zpos": {
+      "displayName": "Propulsion Pod — Front Right",
+      "description": "Front-right propulsion pod: lift propeller, hub, spinner disc, ESC, motor mount and local boom structure. 27 solids.",
+      "derivedFrom": "bbox centre within ±250mm of (x=1089.8, z=+500), solid ≤ 600mm",
+      "memberNodeKeys": [
+        "Wood_screw_3-25x25_GOST_1144-80_10#91",
+        "Wood_screw_3-25x25_GOST_1144-80_12#93",
+        "Wood_screw_3-25x25_GOST_1144-80_13#94",
+        "Wood_screw_3-25x25_GOST_1144-80_14#95",
+        "DIN_EN_ISO_7045_-_M4_x_10_-_48_-_Z_8#105",
+        "DIN_EN_ISO_7045_-_M4_x_10_-_48_-_Z_9#106",
+        "DIN_EN_ISO_7045_-_M4_x_10_-_48_-_Z_10#107",
+        "DIN_EN_ISO_7045_-_M4_x_10_-_48_-_Z_11#108",
+        "DIN_EN_ISO_7045_-_M3_x_16_-_48_-_Z_4#117",
+        "DIN_EN_ISO_7045_-_M3_x_16_-_48_-_Z_5#118",
+        "DIN_EN_ISO_7045_-_M3_x_16_-_48_-_Z_6#119",
+        "DIN_EN_ISO_7045_-_M3_x_16_-_48_-_Z_7#120",
+        "part_139#139",
+        "part_140#140",
+        "part_141#141",
+        "FLAME_100-120A-12S_3#150",
+        "part_192#192",
+        "part_196#196",
+        "part_197#197",
+        "part_198#198",
+        "61-21-CCW#381",
+        "part_385#385",
+        "part_386#386",
+        "part_387#387",
+        "part_388#388",
+        "part_389#389",
+        "part_390#390"
+      ]
+    },
+    "section:pod-fwd-zneg": {
+      "displayName": "Propulsion Pod — Front Left",
+      "description": "Front-left propulsion pod: lift propeller, hub, spinner disc, ESC, motor mount and local boom structure. 27 solids.",
+      "derivedFrom": "bbox centre within ±250mm of (x=1089.8, z=−500), solid ≤ 600mm",
+      "memberNodeKeys": [
+        "Wood_screw_3-25x25_GOST_1144-80_2#83",
+        "Wood_screw_3-25x25_GOST_1144-80_3#84",
+        "Wood_screw_3-25x25_GOST_1144-80_4#85",
+        "Wood_screw_3-25x25_GOST_1144-80_5#86",
+        "DIN_EN_ISO_7045_-_M4_x_10_-_48_-_Z#97",
+        "DIN_EN_ISO_7045_-_M4_x_10_-_48_-_Z_1#98",
+        "DIN_EN_ISO_7045_-_M4_x_10_-_48_-_Z_2#99",
+        "DIN_EN_ISO_7045_-_M4_x_10_-_48_-_Z_3#100",
+        "DIN_EN_ISO_7045_-_M3_x_16_-_48_-_Z#113",
+        "DIN_EN_ISO_7045_-_M3_x_16_-_48_-_Z_1#114",
+        "DIN_EN_ISO_7045_-_M3_x_16_-_48_-_Z_2#115",
+        "DIN_EN_ISO_7045_-_M3_x_16_-_48_-_Z_3#116",
+        "part_131#131",
+        "part_132#132",
+        "part_133#133",
+        "FLAME_100-120A-12S_1#148",
+        "part_174#174",
+        "part_179#179",
+        "part_180#180",
+        "part_181#181",
+        "61-21-CW_1#384",
+        "part_391#391",
+        "part_392#392",
+        "part_393#393",
+        "part_394#394",
+        "part_395#395",
+        "part_396#396"
+      ]
+    },
+    "section:pod-aft-zpos": {
+      "displayName": "Propulsion Pod — Rear Right",
+      "description": "Rear-right propulsion pod: lift propeller, hub, spinner disc, ESC, motor mount and local boom structure. 27 solids.",
+      "derivedFrom": "bbox centre within ±250mm of (x=-450.2, z=+500), solid ≤ 600mm",
+      "memberNodeKeys": [
+        "Wood_screw_3-25x25_GOST_1144-80_6#87",
+        "Wood_screw_3-25x25_GOST_1144-80_7#88",
+        "Wood_screw_3-25x25_GOST_1144-80_8#89",
+        "Wood_screw_3-25x25_GOST_1144-80_9#90",
+        "DIN_EN_ISO_7045_-_M4_x_10_-_48_-_Z_12#109",
+        "DIN_EN_ISO_7045_-_M4_x_10_-_48_-_Z_13#110",
+        "DIN_EN_ISO_7045_-_M4_x_10_-_48_-_Z_14#111",
+        "DIN_EN_ISO_7045_-_M4_x_10_-_48_-_Z_15#112",
+        "DIN_EN_ISO_7045_-_M3_x_16_-_48_-_Z_12#125",
+        "DIN_EN_ISO_7045_-_M3_x_16_-_48_-_Z_13#126",
+        "DIN_EN_ISO_7045_-_M3_x_16_-_48_-_Z_14#127",
+        "DIN_EN_ISO_7045_-_M3_x_16_-_48_-_Z_15#128",
+        "part_142#142",
+        "part_143#143",
+        "part_144#144",
+        "FLAME_100-120A-12S_2#149",
+        "part_187#187",
+        "part_193#193",
+        "part_194#194",
+        "part_195#195",
+        "61-21-CW#383",
+        "part_397#397",
+        "part_398#398",
+        "part_399#399",
+        "part_400#400",
+        "part_401#401",
+        "part_402#402"
+      ]
+    },
+    "section:pod-aft-zneg": {
+      "displayName": "Propulsion Pod — Rear Left",
+      "description": "Rear-left propulsion pod: lift propeller, hub, spinner disc, ESC, motor mount and local boom structure. 27 solids.",
+      "derivedFrom": "bbox centre within ±250mm of (x=-450.2, z=−500), solid ≤ 600mm",
+      "memberNodeKeys": [
+        "Wood_screw_3-25x25_GOST_1144-80#81",
+        "Wood_screw_3-25x25_GOST_1144-80_1#82",
+        "Wood_screw_3-25x25_GOST_1144-80_11#92",
+        "Wood_screw_3-25x25_GOST_1144-80_15#96",
+        "DIN_EN_ISO_7045_-_M4_x_10_-_48_-_Z_4#101",
+        "DIN_EN_ISO_7045_-_M4_x_10_-_48_-_Z_5#102",
+        "DIN_EN_ISO_7045_-_M4_x_10_-_48_-_Z_6#103",
+        "DIN_EN_ISO_7045_-_M4_x_10_-_48_-_Z_7#104",
+        "DIN_EN_ISO_7045_-_M3_x_16_-_48_-_Z_8#121",
+        "DIN_EN_ISO_7045_-_M3_x_16_-_48_-_Z_9#122",
+        "DIN_EN_ISO_7045_-_M3_x_16_-_48_-_Z_10#123",
+        "DIN_EN_ISO_7045_-_M3_x_16_-_48_-_Z_11#124",
+        "part_134#134",
+        "part_135#135",
+        "part_136#136",
+        "FLAME_100-120A-12S#147",
+        "part_169#169",
+        "part_176#176",
+        "part_177#177",
+        "part_178#178",
+        "61-21-CCW_1#382",
+        "part_403#403",
+        "part_404#404",
+        "part_405#405",
+        "part_406#406",
+        "part_407#407",
+        "part_408#408"
+      ]
+    },
+    "section:propulsion-centreline": {
+      "displayName": "Centreline Propulsion",
+      "description": "Fuselage-centreline propeller: two-blade rig, hub, spinner and its ESC. Spins about the longitudinal axis, unlike the four lift pods. 8 solids.",
+      "derivedFrom": "explicit node list (rig 356/373/374/375 plus centreline neighbours 357/361/372/362) — too few nodes to justify a region rule",
+      "memberNodeKeys": [
+        "part_356#356",
+        "part_357#357",
+        "part_361#361",
+        "FLAME_100-120A-12S_4#362",
+        "part_372#372",
+        "part_373#373",
+        "33-61-20-05#374",
+        "33-61-20-05_1#375"
+      ]
+    },
+    "section:empennage": {
+      "displayName": "Empennage & Tail Structure",
+      "description": "Aft tail group: vertical and horizontal surfaces, tail-boom termination and underside structure. 34 solids.",
+      "derivedFrom": "bbox centre x < −800 (aft of every boom and wing element)",
+      "memberNodeKeys": [
+        "33-55-05-04#54",
+        "33-55-05-07#55",
+        "33-55-05-01#56",
+        "33-55-05-02#57",
+        "33-55-05-03#58",
+        "33-55-05-05#59",
+        "33-55-05-06#60",
+        "33-55-05-06_1#61",
+        "part_62#62",
+        "33-55-05-03-1#63",
+        "33-55-05-04_1#64",
+        "33-55-05-07_1#65",
+        "33-55-05-01-1#66",
+        "33-55-05-02_1#67",
+        "33-55-05-06_2#68",
+        "33-55-05-05_1#69",
+        "33-55-05-06_3#70",
+        "33-55-10-21#71",
+        "33-55-10-22#72",
+        "33-55-10-23#73",
+        "33-55-10-24#74",
+        "33-55-10-24_1#75",
+        "33-55-10-21_1#76",
+        "33-55-10-22_1#77",
+        "33-55-10-23_1#78",
+        "33-55-10-24_2#79",
+        "33-55-10-24_3#80",
+        "part_145#145",
+        "33-33-60-00#343",
+        "part_376#376",
+        "part_377#377",
+        "part_378#378",
+        "part_379#379",
+        "part_380#380"
+      ]
+    },
+    "section:wing-zpos": {
+      "displayName": "Right Wing",
+      "description": "Right wing panel from the boom junction out to the wingtip, including spars and skins. 18 solids.",
+      "derivedFrom": "bbox centre z ≥ +700",
+      "memberNodeKeys": [
+        "33-57-60-33_1#25",
+        "33-57-60-03_1#26",
+        "33-57-60-02-1#27",
+        "33-57-60-04-1#28",
+        "33-57-60-12-2_2#29",
+        "33-57-60-12-2_3#30",
+        "33-57-90-20-1#31",
+        "33-57-90-10-1#32",
+        "33-57-20-11-4_1#33",
+        "33-57-20-11_1#34",
+        "33-57-23-02_1#35",
+        "33-57-23-01_1#36",
+        "33-57-60-02-1_1#37",
+        "33-57-20-04-1#38",
+        "33-57-24-01_2#39",
+        "33-57-24-01_3#40",
+        "33-57-22-03_1#43",
+        "33-33-50-21#342"
+      ]
+    },
+    "section:wing-zneg": {
+      "displayName": "Left Wing",
+      "description": "Left wing panel from the boom junction out to the wingtip, including spars and skins. 20 solids.",
+      "derivedFrom": "bbox centre z ≤ −700",
+      "memberNodeKeys": [
+        "33-57-60-33#0",
+        "33-57-60-03#1",
+        "33-57-60-02#2",
+        "33-57-60-04#3",
+        "33-57-60-12-2#4",
+        "33-57-60-12-2_1#5",
+        "33-57-20-11-4#6",
+        "33-57-20-11#7",
+        "33-57-23-02#8",
+        "33-57-23-01#9",
+        "33-57-20-02#10",
+        "part_11#11",
+        "part_12#12",
+        "part_13#13",
+        "33-57-24-01#14",
+        "33-57-24-01_1#15",
+        "33-57-90-20#16",
+        "33-57-90-10#17",
+        "33-57-22-03#20",
+        "33-33-50-20#341"
+      ]
+    },
+    "section:boom-zpos-fwd": {
+      "displayName": "Right Boom — Forward",
+      "description": "Forward half of the right-hand longitudinal boom and its attachment hardware. 61 solids.",
+      "derivedFrom": "bbox centre z > +300 and x ≥ +300",
+      "memberNodeKeys": [
+        "33-57-22-04-1#42",
+        "33-57-22-01-1#45",
+        "33-57-22-05_1#47",
+        "part_51#51",
+        "33-54-11-00_1#138",
+        "part_151#151",
+        "part_157#157",
+        "part_159#159",
+        "part_160#160",
+        "part_162#162",
+        "part_182#182",
+        "part_183#183",
+        "part_184#184",
+        "part_185#185",
+        "part_186#186",
+        "part_188#188",
+        "part_189#189",
+        "part_191#191",
+        "part_211#211",
+        "part_215#215",
+        "part_219#219",
+        "part_283#283",
+        "part_285#285",
+        "part_287#287",
+        "part_288#288",
+        "part_289#289",
+        "part_290#290",
+        "part_291#291",
+        "part_292#292",
+        "part_293#293",
+        "part_309#309",
+        "part_310#310",
+        "part_311#311",
+        "part_312#312",
+        "part_313#313",
+        "part_314#314",
+        "part_315#315",
+        "part_316#316",
+        "part_317#317",
+        "part_318#318",
+        "part_319#319",
+        "part_320#320",
+        "part_321#321",
+        "part_322#322",
+        "part_323#323",
+        "part_324#324",
+        "part_325#325",
+        "part_326#326",
+        "part_327#327",
+        "part_328#328",
+        "part_329#329",
+        "part_330#330",
+        "part_331#331",
+        "part_332#332",
+        "part_333#333",
+        "part_334#334",
+        "part_335#335",
+        "part_336#336",
+        "part_337#337",
+        "part_338#338",
+        "part_340#340"
+      ]
+    },
+    "section:boom-zpos-aft": {
+      "displayName": "Right Boom — Rear",
+      "description": "Rear half of the right-hand longitudinal boom and its attachment hardware. 35 solids.",
+      "derivedFrom": "bbox centre z > +300 (x < +300 after the forward rule)",
+      "memberNodeKeys": [
+        "33-57-22-07_1#41",
+        "33-57-22-06_1#46",
+        "part_50#50",
+        "33-54-10-01_1#137",
+        "part_158#158",
+        "part_161#161",
+        "part_163#163",
+        "part_190#190",
+        "part_199#199",
+        "part_212#212",
+        "part_216#216",
+        "part_220#220",
+        "part_281#281",
+        "part_282#282",
+        "part_284#284",
+        "part_286#286",
+        "part_294#294",
+        "part_295#295",
+        "part_296#296",
+        "part_297#297",
+        "part_298#298",
+        "part_299#299",
+        "part_300#300",
+        "part_301#301",
+        "part_302#302",
+        "part_303#303",
+        "part_304#304",
+        "part_305#305",
+        "part_306#306",
+        "part_307#307",
+        "part_308#308",
+        "part_339#339",
+        "part_348#348",
+        "part_349#349",
+        "part_350#350"
+      ]
+    },
+    "section:boom-zneg-fwd": {
+      "displayName": "Left Boom — Forward",
+      "description": "Forward half of the left-hand longitudinal boom and its attachment hardware. 59 solids.",
+      "derivedFrom": "bbox centre z < −300 and x ≥ +300",
+      "memberNodeKeys": [
+        "33-57-22-04#19",
+        "33-57-22-01#22",
+        "33-57-22-05#24",
+        "part_53#53",
+        "33-54-11-00#130",
+        "part_164#164",
+        "part_165#165",
+        "part_166#166",
+        "part_167#167",
+        "part_168#168",
+        "part_170#170",
+        "part_171#171",
+        "part_173#173",
+        "part_200#200",
+        "part_206#206",
+        "part_208#208",
+        "part_209#209",
+        "part_213#213",
+        "part_217#217",
+        "part_223#223",
+        "part_225#225",
+        "part_227#227",
+        "part_228#228",
+        "part_229#229",
+        "part_230#230",
+        "part_231#231",
+        "part_232#232",
+        "part_233#233",
+        "part_249#249",
+        "part_250#250",
+        "part_251#251",
+        "part_252#252",
+        "part_253#253",
+        "part_254#254",
+        "part_255#255",
+        "part_256#256",
+        "part_257#257",
+        "part_258#258",
+        "part_259#259",
+        "part_260#260",
+        "part_261#261",
+        "part_262#262",
+        "part_263#263",
+        "part_264#264",
+        "part_265#265",
+        "part_266#266",
+        "part_267#267",
+        "part_268#268",
+        "part_269#269",
+        "part_270#270",
+        "part_271#271",
+        "part_272#272",
+        "part_273#273",
+        "part_274#274",
+        "part_275#275",
+        "part_276#276",
+        "part_277#277",
+        "part_278#278",
+        "part_280#280"
+      ]
+    },
+    "section:boom-zneg-aft": {
+      "displayName": "Left Boom — Rear",
+      "description": "Rear half of the left-hand longitudinal boom and its attachment hardware. 30 solids.",
+      "derivedFrom": "bbox centre z < −300 (x < +300 after the forward rule)",
+      "memberNodeKeys": [
+        "33-57-22-07#18",
+        "33-57-22-06#23",
+        "part_52#52",
+        "33-54-10-01#129",
+        "part_172#172",
+        "part_175#175",
+        "part_207#207",
+        "part_210#210",
+        "part_214#214",
+        "part_218#218",
+        "part_221#221",
+        "part_222#222",
+        "part_224#224",
+        "part_226#226",
+        "part_234#234",
+        "part_235#235",
+        "part_236#236",
+        "part_237#237",
+        "part_238#238",
+        "part_239#239",
+        "part_240#240",
+        "part_241#241",
+        "part_242#242",
+        "part_243#243",
+        "part_244#244",
+        "part_245#245",
+        "part_246#246",
+        "part_247#247",
+        "part_248#248",
+        "part_279#279"
+      ]
+    },
+    "section:aft-fuselage": {
+      "displayName": "Aft Fuselage",
+      "description": "Rear fuselage structure between the aft propulsion pods and the empennage. 2 solids.",
+      "derivedFrom": "bbox centre x < −500, after the pod, wing and boom rules",
+      "memberNodeKeys": [
+        "part_346#346",
+        "part_347#347"
+      ]
+    },
+    "section:fuselage-core": {
+      "displayName": "Fuselage Core",
+      "description": "Central fuselage body, nose structure and centreline equipment bay. 34 solids.",
+      "derivedFrom": "everything remaining (|z| ≤ 300 after all preceding rules)",
+      "memberNodeKeys": [
+        "33-57-22-02#21",
+        "33-57-22-02-1#44",
+        "33-57-10-00#48",
+        "33-57-10-00_1#49",
+        "33-14-10-00#146",
+        "part_152#152",
+        "part_153#153",
+        "part_154#154",
+        "part_155#155",
+        "part_156#156",
+        "part_201#201",
+        "part_202#202",
+        "part_203#203",
+        "part_204#204",
+        "part_205#205",
+        "part_344#344",
+        "part_345#345",
+        "33-53-54-10#351",
+        "33-53-54-20#352",
+        "33-53-05-00#353",
+        "33-53-54-30#354",
+        "33-53-06-20#355",
+        "part_358#358",
+        "part_359#359",
+        "part_360#360",
+        "part_363#363",
+        "part_364#364",
+        "part_365#365",
+        "part_366#366",
+        "part_367#367",
+        "part_368#368",
+        "part_369#369",
+        "part_370#370",
+        "part_371#371"
+      ]
+    }
+  },
+  "physical": {
+    "spanM": 4.426,
+    "spanLabel": "nose to tail",
+    "provenance": "placeholder",
+    "note": "Longest bounding-box dimension of the GLB (4426.5), interpreted as millimetres. The source CAD is not in this workspace, so the unit could not be read and this is an inference, not a measurement."
+  }
+}
